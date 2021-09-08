@@ -1,0 +1,177 @@
+>what is Machine learning ?
+
+ML is the sience of getting computer learn automatically 
+and improve from experince without being explicitly programmed.
+
+>Why ML?
+
+Ml solves realworld problems. Unlike the hardcoding to solve the problem.
+ML learns automatically and improves from experince.And these learnings
+can be used to predict the required answer.
+
+>What are features and labels ?
+
+Inshort feature is the input (one column of data in input set) and
+labels are the output.
+
+>What is EDA ? Exploratory Data Analysis ?
+
+It is the first step of datascience . It is an approach of analyyzing
+data sets to summarize their main characterisitics , often using 
+statistics and data visuzlisation techniques. It helps to find patterns,
+spot anomalies and check our assumptions.
+
+>What are data preprocessing Techniques ?
+
+-Dataset Cleaning (drop nulls & fill missing).
+-Feature encoding (categorical : nominal & ordinal)&
+ outliear handling - an observation far from other observations
+ (box plot , scatter plot)(drop,clip or average).
+-Feature scaling (Z score) &
+ PCA(principle component analysis) is commonly used for dimensionality reduction
+ It measures variation in each feature .if there is littlt variation , it throws 
+ the feature out 
+ Correlation - is used for measuring and estimating quantitative relationship b/w features.
+ It measures how strongly 2 features are related. Covariance is a way to measure correlation.
+ 
+ML Agorthms Broadly classified into supervised , unsupervised , Reinforcement
+
+>What is supervised Learning ?
+
+It is ML algorithm of inferring function (pattern finding) from labeled training data.
+Regression-linear Regression
+Classification- logistic Regression | Naive bayes | SVM | KNN | Desicion Tree & randm forest 
+
+>Difference between Regression & Classification ?
+
+Classification is used to produce discrete results. 
+It is used to classify data into specific categories. EX:spam or not spam.
+
+Whereas Regression Deals with continuous data. EX: stock price at a certain point of time.
+
+
+>Loss , Cost fns and Linear & logistic regression ? 
+
+Loss is the number indicating how much the the predicted label has deviated from the actual value.
+We use gradient descent algorithm to minimize the loss or to find the convergence point.
+Most commonly used loss fns are Mean Squred errors (MSE).
+
+Cost funtion is the sum of overall loss.
+
+Linear regression - RMSE (straight line)
+Logistic regression - Sigmoid (only binary classification).
+
+
+>Explain 2x2Confusion matrix , Accuracy, Precision , Recall , F1 in classification ?
+
+confusion matrix :
+
+        True positive  (TP)            False Negative (FN)
+        False positive (FP)            True Negative  (TN)
+
+Accuracy : No of correctly predicted / total predicted.
+(TP+TN)/(TP+TN+FN+FP)
+There is some serious flaws with accuracy , a great accuracy may not mean a good model.
+so we came up with other metrics .
+
+precision : out of "predicated" postive class how many are really true.
+            (TP)/(TP + FP)
+Recall    : out of "Really" Positive class how many are truely predicted.
+            (TP)/(TP+FN)
+Ex: cancer is malingnant.
+
+---------------------------------------------------------
+>ML ALGORITHMS IN DETAIL ?
+
+SVM : 
+We are given a set of data and the goal is to seperate into two different classes.
+data points are visualised as p dimensional vector and we want to know we can sepearate 
+such points with a p-1 dimensionality hypeplane.The best hyperplane that represent
+the largest seperarion or margin b/w classes is called support vector classifier.
+and support vectors are points of the edges of dividing hyperplane.
+
+KNN : 
+an observation is classified according to its K nearest neighbors.
+
+Naive Bayes :
+it is a simple classification algorithm based on bayes therom of probabality.
+here we assume each feature is independednt of each other.
+P(positive)*p(obser/positive) && P(negative)*P(observation/negative)
+
+Decision Tree:
+
+
+>Explain Hyperparametrs ?
+
+learning rate inmywords is the amount of step taken in a gradient decent.
+
+Batch size : is the no of traning examples per iteration.
+
+Epoch : is the number of times the entire training dataset the ml algorithm has completd.
+if batchsize is entire dataset then epoch is equal to no of iterations.
+
+> what is generalization , overfitting ,underfitting , regularization?
+
+generalization: refers to a models ability to adapt to newly unseen data.
+Overfitting: Model fitted to training data too well than required
+Regularization : means penalizing the complexity of a model to reduce overfitting.
+L1 (square of weights + loss) and L2.
+underfitting: the model was not able to detect any pattern from the training data.
+
+> bais and vaireance Tradeoff ?
+
+Bias : inability of a model to capture the true relationship. (error in training set).
+Vairance: inability of a model to adap to new dataset (error in testing). 
+ex : straight line vs squiggly lines.Check image
+
+> Cross Validation ? 
+
+The whole data is split into three parts , training , testing , validation data set.
+A model is trained on training data set and is evaluted on validation set , 
+this process this repeated till we obtain the best model 
+and then it is evaluted on the test data o predict the labels.
+check images
+
+>K fold cross validation ?
+The data is split into k subsets and model trained on k-1 of those dataset
+and tested on last subset and it is repeated for different k-1 subsets
+check images 
+
+
+> what is a ml model ?
+
+A machine learning model is a file that has been trained
+to recognize certain types of patterns.
+
+>what is neural network ?
+
+it a series of algorithm that endeavors to recognize underlying 
+relationships in a set of data by a process mimicing human brain.
+Neurons linked to each other in large numbers.
+
+>activation fn?
+
+activation fn is at the end deciding what is to be fired to the next neuron.
+Is short they decide they will decide whether a neuron should be activated or not.
+
+> RELU ?
+ 
+The Rectified Linear Activation fn is a piecewise linear fn that will output the inpput
+directly if it is positive else it will output zero.
+
+>softmax vs sigmoid ?
+
+sigmoid is used for binary calssification wheres as softmax is used to calssify into
+various categories.
+
+> what is convolution ?
+
+it is a simple mathematical operation , it multiply the image with filters 
+to get evident features or feature map.
+
+> maxpooling ?
+
+it is used to downsample an input , deacrease the dimensionality.
+and to get a broader feature . usually from a 2*2 pixel in the image/feature map 
+maximum pixel value is taken.
+

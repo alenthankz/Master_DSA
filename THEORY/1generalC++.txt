@@ -1,0 +1,81 @@
+>what is scope?
+
+Scope is defined as the extend to which something can be used.
+In programming to the scope of a variabl is defined ast he extend to
+which the the varible can be acessed , declared or work with.
+
+>Local scope vs Gobal scope ?
+
+variables defined within a fn or block are said to be local to those fns
+and cant be acessed outside the block.
+
+global variables can be acessed at any part of the program.
+
+
+>what is namespace ?
+
+declarative region that provides scope to identifiers.
+
+>what are preprocessors ?
+
+it is an instruction to compiler to load before the compilation
+
+>what are macros ?
+
+a piece of code is replaced by the value of macros
+
+>what is inline fn ?
+
+is a fn that expands inline when it is called . 
+When inline fn is called the whole code get inserted at the point of fn call.
+it is fast beacause it doesnt have the overhead of storing address next line details to switch.
+
+>ref vs pointers ?
+
+pointer is a variable that holds the memory address of another variable.
+int *p = &a;
+refers is an alias to an existing variable. 
+int &ref = a; 
+
+>switch vs if ?
+
+expression based on range of values - ifelse
+large group of values  - switch is effiecient.
+
+>what are datatypes ?
+
+each data requires specific amount of memory and specific operations
+to be performed over it.
+
+>what are enums ?
+
+Enumeration (or enum) is a user defined data type in C. It is mainly used to assign names to integral constants
+
+>what are datastructures ?
+
+datastructure is a particular way of organising data , so it can be used effieicently.
+
+>declaration vs definition ?
+
+declaration of a variable or fn is informing the compiler the name and type of variable/fn.
+defintion says where the variable get stored. i,e memory is allocated.
+
+>size of class is 1 atlesat , static members are not included in size.
+
+>Storage classes ?
+
+auto
+extern
+static
+register
+
+
+
+NP VS P 
+
+NP problems are those problems which can be made to polynomial timecomplexity Non determinsitically.
+
+NPhard Vs NPComplete
+
+A problem X is Np hard if there is an Np complete problem Y which can be reduced to X.
+A problem X is np complete when a problem Y NP problem which can be reuced to X in polynomial time

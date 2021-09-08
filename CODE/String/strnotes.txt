@@ -1,0 +1,28 @@
+char and string can be coersed
+-'0'
+always check if any repeating character (cannot use last index array) 
+to check to strings anagram in one step sort or make a map 
+also check for n =1 string 
+stoi(str);
+to_string(1234);
+string s(1, chr);  && reverse is simple just use [] eg : str[0];
+foundind = str.find(c);
+foundind = str.find(c, foundind+1); 
+str.erase(itrbegining,itrend) or str.erase(itrbeg,itrbeg+count) //begninig included 
+str.erase(index,count);
+str.substring(index,count);
+if we are creating str from char[] we need to give '\0' manually but it wont come in size.
+unlike array string can use a hashmap arr[26] rather than inbuiltmap;
+****we can loop through all 26 characters && heap arr[26] as hashmap
+
+
+
+
+
+
+MAP
+-----------------------------
+for (auto it : frequencyMap) {
+            freqCharPQ.push({it.second, it.first});
+}
+mapp.erase(m);

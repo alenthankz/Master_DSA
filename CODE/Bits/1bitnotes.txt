@@ -1,0 +1,16 @@
+1<<i : pow(2,i) : ith position is set 
+when i =1 : 5<<1 (multiply by 2) = 10 && left shify by 1 i,e  0101 becomes 1010
+
+set a bit = mask|=1<<i;
+unset a bit = mask^=1<<i;
+
+imp:
+number of set bit of x
+if x is odd = 1+ no fo set bit of x/2;
+if x is even = no of set bit of x/2 ( as it is just a left shift )
+
+closest power of 2 to n  :  n&(n-1);
+right most set bit       :  n&~(n-1);
+
+
+Convert into binary string if necessary.

@@ -1,0 +1,2 @@
+for immutable queries (including range ) : use precalculation using dp/prefix or other methods.
+for mutable   queries ( mainly range)    : segment tree and difference array

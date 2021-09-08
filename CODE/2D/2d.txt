@@ -1,0 +1,8 @@
+1. take each box and do a dfs
+2. use dp 
+3. use 4 pointers
+
+NB: if we are using dfs just from one box then would have to backtrack the visited set.
+
+always check ranges of matrix.
+also for dp there is chnce , it is already filled so check max(currentdp,calculated dp);

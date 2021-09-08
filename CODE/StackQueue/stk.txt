@@ -1,0 +1,6 @@
+here the main idea of stack is it help to access in nonlinear way. that is even process again a ele
+which we passed already 
+
+
+NGele= GsG;we get next greater element on both sides , here importance is more to s. you can process s with 
+while loop or one by one with for loop.

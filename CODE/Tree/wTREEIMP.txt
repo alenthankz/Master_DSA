@@ -1,0 +1,49 @@
+There are two types :
+A) which returns a integer and have int&res/int*res  
+B) which returns Node * that of two types 1) root->left = fn() and return root at end  ,2) Node*left=fn() and return (left or right) at the end.
+C) Like normal recursive fn we can pass sum without refernce  (it can be inorder, preorder ,post order)
+
+
+There are tow types of base case : 
+A) root==NULL 
+B) root->left ==NULL && rooot->right ==NULL (full tree,mindepth); 
+
+NODE: usually post order , preorder , inorder(it stops early than other two recorsions)
+ADJ :  Dfs , also '&res' passing is also a great idea.
+
+
+int dfs( vector< vector<int> >&tree, int node, int parent)
+{
+    int res=0; // be careful no return here
+    for (auto it : tree[node]) {
+            if (it != parent) {
+                res=dfs(tree, it, node);
+                // something with res to get overall of currentnode
+            }
+        }
+    return overallres;
+}
+
+// idea here is start from leave nodes , consider each subtree as tree
+
+
+dp on tree 
+
+
+void dfsDP( vector< vector<int> >&tree, int node, int parent , vector<int>&dp)
+{
+    dp[node] = 1;
+    for (auto it : tree[node]) {
+            if (it != parent) {
+                dfs(tree, it, node);
+                dp[node] += dp[it];
+            }
+        }
+    
+}
+
+
+
+
+
+view ideais important && i =right i+1 left .

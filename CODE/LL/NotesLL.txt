@@ -1,0 +1,1 @@
+LL is very helpful when new items comes. by hashing the addres we can get it done in o(1). 

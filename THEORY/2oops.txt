@@ -1,0 +1,201 @@
+what is OOP?
+
+Object Oriented Programming is a programming paradigm where the complete
+software act as a bunch of objects talking to each other.
+An object is a collection of data and methods which can manipulate data.
+
+Advantages of oop?
+
+1) overall understanding of the softwae is increased by decreasing the
+   diatance between language spoken by developers and users.
+2) Encapsulation - polymorphism - abstraction - inheritance
+
+what is class ?
+
+A class in C++ is the buiding block , that lead to oop. It is a user defined
+datatype, which holds its own data members and member functions , 
+which can be acessed and used by creating an instace of class.
+A class is a blueprint of object. No memory is allocated when class is defined
+
+what is object?
+
+Object is an instance of class or is a real world entity which is the basic unit of oop.
+It is a collection of data and methods which can manipulate the data.
+memory is allocated when an object is instanciated.
+
+What is Encapsulation?
+
+Bundling of data and methods which manipulate the data is called Encapsulation.
+It also refer to data hiding : restrict the acess to members of class eg: pivate ,protected,public.
+Example : A car class - members : car_id , distance , tankCapacity -methods : mileage , fuelLevel ,speed
+
+Acess specifers or modifers:
+are keywords that determine the acessessibility od properties of class. 
+
+what is data abstraction ?
+
+Providing only esstential info and hiding the background details.
+Seperate interface from implementation
+Example : breaking of a car.
+Levels  : user view level , logical level-what data is stored , physical level - how data is stored.
+
+abstract class : class which cannot be instanciated. which contain atleast one pure virtual fns.
+
+What is inheritance ?
+
+Inheritance is the ability of a class to inherit capabilities or properties of another class or parent class.
+Inheritance allow user to reuse code there by reducing redundancy.
+Example : explain well - vehicle - cars,bike both have some properties of vehicle , thats why inherit.
+
+Types of Interitance :
+
+single
+multiple       -   more than one base class
+multilevel     -   a class inherit fromm another class which itself is a subclass of some base class.
+hierarchiacal  -   when one base class have more than one subclass.
+Hybrid         -   multiple & multilevel combination
+
+virtual class and diamond inheritance problem. EG- class B : virtual public A{}
+
+if derived class has a member fn of same name of base class. all base class fn of that name will be nullified
+even if the signatures are differnt , it may lead to compiler error.
+
+
+What is polymorphism ?
+
+polymorphism means same piece of code behaving differntly in different contects.
+
+Compile Time polymorphism : Compiler knows which function should be called when a polymorphic call is made.
+C++ support CTP by function overloading and operator overloading.
+
+Example : int fn(int x) & int fn(double x)  --fn overloading
+          class Complex{
+              int real,img;
+              public:
+              Complex operator +(Complex&obj){
+                  Complex res;
+                  res.real =real+obj.real;
+                  res.img =img+obj.img;
+                  return res;
+              }
+          }                                 --operator overloading.
+
+
+Run Time Polymorphism :The virtual fns (NB: only virtual fns) are called according 
+to the type of object pointed not by the type of pointer. 
+Derived class has a defintion of one of the member fn of base class.Base class is said to be overridden.
+
+Example :  class base{
+            public:
+            virtual void print(){
+                cout<<"Inside base";
+            }
+          }
+          class derived : public base{
+              public:
+              void print(){
+                  cout<<"Inside derived";
+              }
+          }
+          derived d;
+          base *bptr= &d;
+          bptr->print(); // Inside derived 
+
+
+what are constructor , Destructor , Static , Friend  ?
+
+CONSTRUCTOR: is a member fn of class which has same name as that of class.
+it helps in the initilisation of class.
+
+it has a default , defualtcopy constructors but if we write any constructors of our own
+defualt , defualtcopy constructors will be erased , may even lead to compiler error.
+
+constructor has no return type not even void. 
+
+constructor can be private if there is a friend class / or no object is created from that class else not.
+Example : helo
+          class A{
+              private:
+              A(){
+                  cout<<"Inside A   ";
+              }
+              friend class B; 
+          };
+          class B{
+              Public:
+              B(){
+                  A a;
+                  cout<<"Inside B";
+             }
+          };
+          B b // Inside A  Inside b
+          // A a - error
+
+DESTRUCTOR : is a member fn of class with same name as class and an tilda operator.
+it helps in the dealloctaion of memory of an object.
+
+only one Destructor
+can be privte if no object is initialised.
+
+can be virtual - i,e when a derived class is pointed by base class pointer.(i,e base * bptr=&d)
+when deleted derived class destructor is not called hence virtual ~base();
+
+
+FRIEND : 
+ friend class can acess the private and protected members of the class in which it is declared as friend.
+ friend class can be declared private and public
+
+ friend fn can be a goblal or member fn of another class.
+ Example - friend int globalfn(); or friend int A::classAFn();
+
+ Frienship is not inherited
+ Example - class A
+{
+  protected:
+    int x;
+  public:
+    A() { x = 0;}
+  friend void show();
+};
+  
+class B: public A
+{
+  public:
+    B() : y (0) {}
+  private:
+    int y;
+  
+}; 
+void show()
+{
+  B b;
+  cout << "The default value of A::x = " << b.x;
+  // Can't access private member declared in class 'B'
+  cout << "The default value of B::y = " << b.y;
+}
+  
+int main()
+{
+  show();
+  return 0;
+}
+
+
+
+STATIC : it is an instrucion to compile not to keep the variable in existence 
+for the life time of program even if it goes out of scope.
+
+static fn can acess only static members of class
+static members size is not included in size of class
+static fn/member can be acessed even without objects
+static fn can never be virtual.
+
+
+
+
+
+
+
+
+
+

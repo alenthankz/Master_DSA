@@ -1,0 +1,47 @@
+INTERVIEW GENERAL APPROACH :
+
+Substr : kadane - Lastidx - Hash/window 
+Incrase: LIS/BS
+Min    : BFS/BS
+Else   : Recur Dp
+2 Arr  : merge
+
+
+
+substr/subarr
+
+kadane
+count/largest subarr with given sum
+subarr in strings
+lcs&lis
+longest concecutive subseqs
+
+Pairs
+is/count pairs with given sum
+2 pointer approach
+
+dp
+intro & lis/rodcutting
+
+tree
+Node* or int l=  (int & res)
+Node* or int r=  (int & res)
+return root or (l&&r);
+
+BST
+if() condition before l & r in tree
+
+Stack
+next greater / next greater permutation
+
+string 
+hash(26/256)
+last index
+count==pat.size()
+
+missing
+bit - O(n) unsorted/onlyonemissing/missing&repeating
+BS  - O(logn) sorted/multiple missing
+-vemul -O(n)  unsorted/multiple missing
+
+

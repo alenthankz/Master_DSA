@@ -1,0 +1,231 @@
+what is os ?
+is basically a software program that manages and handles 
+all resources of computer softwarea nd hardware 
+
+fns of OS ?
+
+Memory and Processor Management
+Providing user interface to users
+Scheduling of resources and jobs
+File Management and Device Management
+Error Detection
+Security
+
+
+kernal ?
+he kernel is basically a computer program usually considered as a central component  of OS
+It is generally responsible for converting user commands into machine-level commands.
+there by responsible for managing all computer resources such as CPU, memory, files, processes, etc.
+
+
+What is a process ? vs program
+
+A process is a program that is currently under execution. The main fn
+of OS is to manage and handle all of these processes. eg : web browser
+a process can be divided into four parts 
+stack - temparary data , parameter , fn pointer , return address 
+heap - dynamic data 
+data - global and static values 
+text - value of pc , register
+
+program is a collection of instructions that can be executed to perform a task.
+
+
+what are states of a process ?
+
+new - process is just created.
+ready - the process has all the resources available to run but wait ti get assigned a processor
+running - cpu start executing process's instructions
+waiting - process cant run as it is waiting for some event to happen.
+terminate - process is completed or finished execution.
+
+what is process table ?
+
+To keep track of the state of a process the OS keeps track of a table known as process table.
+In the table every process is listed with the resources they are using and the current state of
+the process. 
+Process control block is data structure that os maintain to keep track of evry process
+and the uniquely identified by the process id (pid) 
+
+TERMINOLOGY ALERTS :
+
+Multiprogramming : when two or more program reside in memory at the same time is called 
+multiprogramming , itincreases cpu utilisation as cpu always have somrthing to execute.
+
+Multitasking : when multiple jobs are executed by the cpu simultaneously by context-switching b/w 
+them. Switches occurs so frequently that user may intereact with each program while it is running.
+
+Context-Switching : It is a mechanism to store and restore the state of cpu in pcb
+so that execution can be resumed from the same point at a later time.
+
+Long term scheduler: regulates the processes which are selected for processing.
+programs are setuped in a queue (New->Ready). The primary objective is to produce
+a balanced mix of jobs. it is responsible for more degree of multiprogramming. (slow)
+
+short term scheduler : increase the cpu performance in accordance with 
+the chosen set of criteria.(Ready->Running)
+
+mid term scheduler : it removes the program from the memory.
+
+
+What are scheduling algorithms ?
+
+is a process that is used to improve efficiency by utilising maximum CPU and minimising
+waiting time of tasks. It simply deals with which requests should be resources alocated 
+it resuces the reource starvation.
+
+Different Types of scheduling algorithms?
+
+firstcome firstserve:
+Shortest job first:
+shortest remaining time:preempted by a newer ready job with shorter time to completion.
+Round robin:Each process is provided a fix time to execute, it is called a quantum.
+priority scheduling: executed based on priority , same priority in first come first serve.
+Multilevel Queue:
+Multiple queues are maintained for processes with common characteristics.
+Each queue can have its own scheduling algorithms.
+Priorities are assigned to each queue.
+
+what is Thread ?
+
+Smallest unit of processing , light weight sub process.
+They are popular ways to improve application by parellism
+They have their own programcouter(pc) register set and a stack space. But they share code and data section.
+it reduces the time required for context switching.
+
+Process VS thread ?
+
+Process
+
+These are heavy-weight operations.
+system call involved 
+os treat different process differetly
+different copies of data
+context switching is slow
+block a process dont block other
+independent
+
+what is process synchronisation ?
+
+is a technique to coordinate processes that use shared resources or data.
+it is very essential to coordinate cooperating proceses to maintain data consistency
+it main purpose is to share resource without any interfereance using mutual exclusion.
+
+Rules of synchronisation ?
+
+mutual exclusion
+progress
+bounded wait
+
+what do you mean by semaphore ?
+
+it is a signeling mechanism. it holds one positive interger value , it is used to solve
+the issue of critical sections in synchronisation process by two operations.
+wait()down and signal () 
+it locks the resource.
+its value indicates the current status of shred variable.
+
+
+
+Types of Semophore ?
+
+binary semaphore                 mutex
+
+based on signelling mechanism    locking mechanism
+faster                           slower
+integer                          object
+
+
+Semaphore implementation ?
+
+sem_t mutex;
+
+sem_intit(&mutex);
+
+sem_wait(&mutex)
+sem_post(&mutex)
+
+sem_destroy(&mutex);
+
+
+TERMINOLOGY ALERTS :
+
+Starvation: It is generally a problem that usually occurs when a process has not been able to get the required resources 
+it needs for progress with its execution for a long period of time.
+In this condition, low priority processes get blocked and only high priority processes proceed towards completion 
+because of which low priority processes suffer from lack of resources. 
+
+Aging: It is a technique that is used to overcome the situation or problem of starvation. 
+It simply increases the priority of processes that wait in the system for resources for a long period of time. 
+
+
+what is deadlock ?
+
+is a situation where two or more processes wait for each other to finish 
+and none of them ever finish.When two or more process hold some resources 
+and wait for resources held by other.
+
+conditions for deadlock :
+mutual exclusion - there is some resources that cant be shared.
+hold and wait.
+non-preemption
+circular wait.
+
+
+primary memory vs secondary memory ?
+
+directly accesbile             first , needed to transfer to prmary memory 
+by processing unit
+
+temporay and costly            permamanat & cheap
+
+
+External vs Internal fragmentation ?
+
+memory - continous process
+       - non continous (paging)
+
+Extrenal fragmentation: happens when there’s a sufficient memory to satisfy the memory request of a method
+but it is spread non continuosuly.
+
+Internal Fragmentation:  memory is split into fixed sized blocks. Whenever a request for the memory,
+the fixed sized block is allotted to the method. 
+however in some case the memory allotted is more than the memory requested
+
+
+Virtual memory ?
+
+It is a memory management technique feature that creates the illusion of very large main memory
+The idea of vm is to use disk space to extend the Ram. Running process doesnot need to care whether
+the memory is from RAM or disk.it is achieved by subdiving the virtual memory into smaller pieces 
+and loaded into memory whenver required.
+
+Translation lookaside buffer (TLB)
+Page table
+
+paging vs segmentation ?
+
+paging -- divide the process into equal size pages and put in MM.(faster)(frames)
+segmentation - divide the process in users point of view of different sizes.(Holes)
+
+what is thrashing ?
+
+situation when the performance of a computer degrades or collapses.
+we brought lots of pages into MM but not the ones CPU needs.
+it occurs when system spends more time processing pagefaults than executing transactions.
+
+
+
+Page replacement algorithms ?
+
+First In First Out (FIFO) 
+Optimal Page replacement –In this algorithm, pages are replaced which would not be used 
+for the longest duration of time in the future.
+Least Recently Used –
+In this algorithm page will be replaced which is least recently used.
+
+
+Beladys Anomaly ?
+
+Belady’s Anomaly is a phenomenon in which if we increase the number of frames in memory,
+then the number of page faults also increases

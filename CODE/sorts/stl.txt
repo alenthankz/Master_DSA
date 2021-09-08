@@ -1,0 +1,1 @@
+intro sort = heap + quick + insertion(arr smalle is efficient)

@@ -1,0 +1,4 @@
+1) substr k fixed window size       : checkIfPermOfaStrIsSubstr
+2) substr variable window size      : LongstSubNonRepeat
+3) not substr variable window size  : subVowels
+

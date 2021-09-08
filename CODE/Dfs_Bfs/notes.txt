@@ -1,0 +1,13 @@
+Dfs is mainly combination (that is from one state toanother ) in a Tree/Graph/2D/or anythingelse. This is nearlysame concept
+of backtracking as well.
+
+
+Bfs comes into play when we are supposdto find minimum of something.
+
+
+**use Visited ONLY IN GRAPH if needed  , use set , setA.count(var1) or setA.find(var1) ,setA.insert(var2)
+
+
+**DP GOES WELL WITH DFS , dp even can be Bit dp (travelling salesman)
+
+bfs is used when there is a possibility of combination at a level

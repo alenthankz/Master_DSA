@@ -1,0 +1,21 @@
+Priority_queue/heap= n:Build;
+Priority_queue/heap= Log(n):insert/delete;
+
+Dfs=(v+e)(v+e)(v+e)
+Bfs=(v+e)     / v*v
+Dij =elog(V) / v*v
+
+kmp=(n)
+
+tree - O(n)
+bst - O(H)
+
+
+union/find =mlog(n) --m operations on n elements
+
+sieve =nlog(log(n))
+
+binary_search=log(n)
+
+Segmented_tree=n:Build
+Segmented_tree=log(n):query/build

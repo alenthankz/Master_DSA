@@ -1,0 +1,159 @@
+What is a network ?
+
+Network is an interconnected group of devices that allow sharing of data.
+
+What is Internet ?
+
+it is Network of networks.
+
+What is topology ?
+
+Network topology specifies the layout of network ,
+how devices are connected to each other.
+
+What are Nodes and Links ?
+
+Any communicaing devoce in a network is node , it can send/reieve information in network.
+Link is the connectivity between nodes in the network , it maybe wired or wireless.
+
+Explain different type of Network ?
+
+LAN - Is a collection of devies connected together in one physical location eg home/office.(wired/wireless)
+MAN - It connects and covers the whole city eg : cable connection
+WAN - It spans a geographical are , often country or continent
+
+Explain OSI model ?
+
+Open system Interconnections(OSI) is a network architeture model , it deals with connecting devices
+that are open for communication with othe system.
+7 layers :
+application
+presentation -data compression and encryption
+session      - maintains the sessions b/w users.
+*transport 
+network 
+datalink 
+physical - communication channel . transmission modes -simple .half/fullduplex 
+
+router/switch/hub/repeater ?
+
+Explain TCP/IP model ?
+
+It is a compressed version of OSI . It contains 4 levels.
+1) application layer -  HTTP/SMTP/RTP/DNS
+2) Transport layer   -  TCP/UDP
+3) Internet layer    -  IP/ICMP/ARP(address resolution protocol -conver ip to mac)
+4) Link layer        -  DSL/SONET/ETHERNET
+
+Differntiate TCP/IP vs OSI models ?
+
+4 layers                :     7 layers
+More relaible           :     less relaible
+horizontal approach     :     vertical approach
+transport layer doesnot :     delivery is assured
+provide assurance of 
+delivery of packets
+more flexible with      :     hard to change protocols.
+protocols
+
+Data link layer ?
+
+it is resposible for moving of data in and out of physical link of network.
+It takes the packets from the network layer and converts into frames (flag header payload tail flag)
+
+It handle Flow control, the Protocols are:
+1) stop & wait : only 1 frame transmitted , 1 frame retranmistted in case of error
+2) Go back N   : N frames and N frames retransmitted one by one ( coz reciever window size is 1)
+3) selective repeat : N frames and N frames retransmitted.
+
+It handles bit transmission errors by crc and other methods.
+
+it handles actual control of media (MAC):
+pure aloha : sents data whever node want to
+slotted aloha : sents data at the start of a slot
+Csma 
+1-persistent: sent data if channel is free , if collision occur wait a random time.
+non persistent: if channel is busy wait a random amount of time
+p persistant : if channel is busy ,wait untill next slot 
+
+
+Network Layer ?
+
+Network layer is responsible for routing packets(datgram for udp) from source address 
+to destination address.
+many networks are partitioned in subnets , devices like router operate 
+in this layer to forward packets between subnets and diff networks.
+
+Major Routing algorithms are :
+Flooding - sent packetsin all outgoing lines except the arrived line.
+Distance vector - each router maintains a table and distance to neighbours and shortest distance 
+is found out using dij algo
+    counting to inf prob : c->a->b->internet . c->a->b internet , a will say to b that i can connect 
+    to internet but actually a is connected to internet via b but a dont know that and come to help b .
+Link state - Link state routing is a technique in which each router shares the knowledge of 
+its neighborhood with every other router in the internetwork.
+
+IP protocol : responsible for transferring of packets from source to host by looking ip adresses
+two types - ipv4(32 bit ip adresses) and ipv6(48 bit ip adresses)
+
+classful adressing :
+please look at image (imp)
+subnetting describe in my own words.
+
+disadvantages :wastage of address- class C only 254 hosts is too small 
+               whereas class B 65000 is too large
+classless addresing - 192.168.1.1/28 first find mask by putiing 28 1s and rest zero
+                      bit AND mask with given ip to find out network.
+
+
+fragmentation - breaking down of pakets(data + header) to fit the reciever's window size.
+
+
+
+
+Transport Layer ?
+
+end to end communtication (port to port).
+
+Tcp provide relaible and error free communication b/w end systems.
+it perform segmentation and sequencing. it has acknowledgment feature and control the Flow
+
+
+TCP                            vs                UDP
+
+Connection Oriented                        connectionless
+more relaible                              less relaible
+slower transmission                        faster transmission.
+packets order can be preserved             packets are independent of each other
+use three handshake model for connection   No handshake
+heavy weight                               less weight
+Protocols like HTTP/SMTP                   protocols like DNS
+
+NB: three way handshake (SYN, SYN+ACK , ACK). 
+Detailed tcp connection establish and termination pictures in IMAGES
+
+
+Application layer ?
+
+
+HTTP/HTTPS : is used by the world wide web to manage communication b/w webbrowsers and servers.
+HTTPS = HTTP(Hyper text transfer protocol )+SSL(secure socket layer)
+it uses port 80 by default.
+
+SMTP - simple mail transfer protocol, it sets rule for communication via email.
+port 25.
+
+DNS - Domain name system. It is a decentralised and hierarchiacal naming for devices.
+UDP
+
+
+Firewall and VPN ?
+
+firewall : network security system that monitors the incomming and outgoing traffic.
+it blocks the same based on firewall secuirty policies.
+it act as a wall between public network(internet) and private network 
+
+
+VPN : 
+
+

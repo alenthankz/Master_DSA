@@ -1,0 +1,118 @@
+What is DBMS ?
+
+DBMS is a collection of program that facilitates users to create and
+maintain a database
+it provides a tool or interface for perforing operations such as 
+inserting, deleting , updating.
+It helps a user to overcomeproblems like data inconsistency , data redundency..
+
+
+What is Database ?
+
+it is a logical , conssitent and organised collection of data that can be
+easily acessed,update and managed
+
+Advantages of DBMS ?
+
+DataSharing / multi user interface: Data from single database can be used by multiple users
+Data Consistency: 
+Elimniate redundency:
+Data independence: allows to change the structure of data without altering executing programs
+Easy accesssibility: Indexed
+Provide Backup and Recovery: DBMS is asssociated with necessary tools that make secure
+
+what is Schema ?
+
+Schema is the skeletal structure of database that contans no data.
+
+Data independence - abstraction ?
+
+Physical level: lowest level and is managed by DBMS. It takes care of how 
+data is stored physically in disks.
+Conceptual/logical Level: What data is stored in database and relationship between data.
+View Level: View is a virtual table created by selecting from one or more tables.
+
+Different Languages present in DBMS ?
+
+DDL-commands required to define a databse. EX: Create,Alter,Drop
+DML-commands required to manipulate the data present in database.EX Select Update insert.
+DCL-commands that deal with permisssions and controls of databse system.Ex : Revoke
+TCL-commands required to deal with transactions of the databse EX: commit , rollback,savepoint.
+
+what is transaction ?
+
+A transaction can be defined as a group of tasks.
+A single task is the minimum processing unit which cannot be divided further.
+
+
+ACID Properties of Database?
+
+Atomicity: The property reflects the concept of either executing the whole query or nothing at all.
+When an transactions occur in a database then that update must be reflected on the whole database or shouldnt be reflected at all.
+
+Consistency:If the database was in a consistent state before the execution of a transaction,
+it must remain consistent after the execution of the transaction as well.
+
+Isolation: This property implies that each transaction occurs independently.
+state of an ongoing transaction doesnt affect the state of another ongoing transactions.
+
+Durability: this property make sure that no data is lost even if system fail or crash.
+
+
+
+What is a lock. Explain the major difference between a shared lock and an exclusive lock?
+
+A lock is a mechanism to protect a shared peice of data from getting updated
+by two or more database users at the same time.Once a session or user accquired a lock.
+no other sessions will be able to modify untill lock is released.
+
+shared lock is required for reading a data item and  many transaction may hold a lock 
+on the same data.
+Exclusive lock is a lock on any transaction is about to perfom write operation.
+this lock doesnt allow mire than 1 transaction to hold at a time thereby prevent inconsistency.
+
+
+Pre-claiming Lock Protocol
+Two-Phase Locking 2PL
+Strict Two-Phase Locking
+
+Timestamps
+
+Deadlock prevention ?
+
+Wait-Die Scheme old wait , young die
+Wound-Wait Scheme young rollback , old wait
+
+
+what is fnal dependcy?
+
+it exist when relation between two attributes allows you to determine corresponding attributes unqiuely.
+
+
+Normalization in DBMS?
+
+the process of analysing a given realtion in terms of functional dependcies
+to minimize redundency and also to minimise insertion , deletion,update anomalies.
+
+1NF - every column must have only a single value.
+
+2NF - every non prime attribute of the table should be fully functionally depended on the prime key.
+even if the key element is deleted non key element will be in the database.      
+
+3NF -There shouldnot be any transitive functional dependcies.
+
+
+INDEXING ?
+
+Indexing is a data structure technique to efficiently retrieve records from the database files
+based on some attributes on which the indexing has been done.
+
+
+In dense index, there is an index record for every search key value in the database.
+
+In sparse index, index records are not created for every search key.
+we first proceed by index record , the data we want is not there then we search sequentially
+
+As the size of the database grows, so does the size of the indices. 
+There is an immense need to keep the index records in the main memory so as to speed up the search operations.
+If single-level index is used, then a large size index cannot be kept in memory which leads to multiple disk accesses.

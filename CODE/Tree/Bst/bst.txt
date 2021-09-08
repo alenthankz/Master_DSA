@@ -1,0 +1,1 @@
+used to find the number of smaller elements than a currEle  to the right of currEle

@@ -1,0 +1,43 @@
+Round(val,2)
+Ceil(val)
+Replace(val,"0","")
+power(val,2)
+left(name,3) or substr(name,1,3)\
+concat("hi",name)
+Sqrt
+LIMIT 1 =>max,min
+
+CASE
+    WHEN condition1 THEN result1
+    WHEN condition2 THEN result2
+    WHEN conditionN THEN resultN
+    ELSE result
+END;
+
+self join
+
+SELECT A.CustomerName AS CustomerName1, B.CustomerName AS CustomerName2, A.City
+FROM Customers A, Customers B
+WHERE A.CustomerID <> B.CustomerID
+AND A.City = B.City 
+ORDER BY A.City;
+
+
+
+ JOIN ON s.Marks BETWEEN g.Min_Mark AND g.Max_Mark
+
+ GROUP BY => ORDER BY COUNT(*)
+
+ <> => not equal to
+
+select max count in groupby or can use limit with orderby 
+count of count =1 , no of counts is not repeated.
+
+ (SELECT TOTAL
+   FROM
+     (SELECT COUNT(*) AS TOTAL
+      FROM CHALLENGES
+      GROUP BY HACKER_ID)
+   GROUP BY TOTAL
+   HAVING COUNT(TOTAL)=1
+ )
